@@ -4,10 +4,10 @@ A function definition is a function declaration that also specifies the function
 ## Table of contents
 * [F.def: Function definition](#fdef-function-definitions)
   * [F.5: If a function is very small and time-critical, declare it inline](#f5-if-a-function-is-very-small-and-time-critical-declare-it-inline)
-  * [F.7: For general use, take T* or T& arguments rather than smart pointers](#7-for-general-use-take-t-or-t-arguments-rather-than-smart-pointers)
+  * [F.7: For general use, take `T*` or `T&` arguments rather than smart pointers](#7-for-general-use-take-t-or-t-arguments-rather-than-smart-pointers)
 * [F.call: Parameter passing](#fcall-parameter-passing)
   * [F.21: To return multiple "out" values, prefer returning a struct or tuple](#f21-to-return-multiple-out-values-prefer-returning-a-struct-or-tuple)
-  * [F.23: Use a not_null<T> to indicate that "null" is not a valid value](#f23-use-a-not_nullt-to-indicate-that-null-is-not-a-valid-value)
+  * [F.23: Use a `not_null<T>` to indicate that "null" is not a valid value](#f23-use-a-not_nullt-to-indicate-that-null-is-not-a-valid-value)
 
 ### F.def: Function definitions
 
@@ -19,7 +19,7 @@ inline string cat(const string& s, const string& s2){
 ```
 _An inline function is part of the ABI_
 
-#### F.7: For general use, take T* or T& arguments rather than smart pointers
+#### F.7: For general use, take `T*` or `T&` arguments rather than smart pointers
 ```cpp
 // accepts any int*
 void f(int*);
@@ -43,7 +43,7 @@ tuple<int, string> f(const string& input){
 }
 ```
 
-#### F.23: Use a not_null<T> to indicate that "null" is not a valid value
+#### F.23: Use a `not_null<T>` to indicate that "null" is not a valid value
 ```cpp
 // it is the caller's job to make sure p != nullptr
 int length(not_null<Record*> p);

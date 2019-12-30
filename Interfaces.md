@@ -2,13 +2,13 @@
 Contract between two parts of a program.
 
 ## Table of contents
-* [I.6: Prefer Expects() for expressing preconditions](#i6-prefer-expects-for-expressing-preconditions)
+* [I.6: Prefer `Expects()` for expressing preconditions](#i6-prefer-expects-for-expressing-preconditions)
 * [I.7: State postconditions](#i7-state-postconditions)
-* [I.12: Declare a pointer that must not be null as not_null](#i12-declare-a-pointer-that-must-not-be-null-as-not_null)
+* [I.12: Declare a pointer that must not be null as `not_null`](#i12-declare-a-pointer-that-must-not-be-null-as-not_null)
 * [I.23: Keep the number of function arguments low](#i23-keep-the-number-of-function-arguments-low)
 * [I.25: Prefer abstract classes as interfaces to class hierarchies](#i25-prefer-abstract-classes-as-interfaces-to-class-hierarchies)
 
-### I.6: Prefer Expects() for expressing preconditions
+### I.6: Prefer `Expects()` for expressing preconditions
 ```cpp
 Expects(height > 0 && width > 0); // good
 if (height <= 0 || width <= 0)    // obscure
@@ -26,7 +26,7 @@ int area (int height, int width){
 }
 ```
 
-### I.12: Declare a pointer that must not be null as not_null
+### I.12: Declare a pointer that must not be null as `not_null`
 ```cpp
 int length(not_null<const char*> p);  // cannot be nullptr
 int length(const char* p);            // not clear
