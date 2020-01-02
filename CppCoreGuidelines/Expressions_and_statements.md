@@ -3,7 +3,7 @@ They are the lowest and most direct way of expressing actions and computation. D
 
 ## Table of contents
 * [ES.dcl: Declarations](#esdcl-declarations)
-  * [ES.11: Use `auto` to avoid redundat repetition of type names)](#es11-use-auto-to-avoid-redundant-repetition-of-type-names)
+  * [ES.11: Use `auto` to avoid redundat repetition of type names)](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Expressions_and_statements.md#es11-use-auto-to-avoid-redundat-repetition-of-type-names)
   * [ES.12: Do not reuse names in nested scopes](#es12-do-not-reuse-names-in-nested-scopes)
   * [ES.23: Prefer the `{}`-initializer syntax](#es23-prefer-the--initializer-syntax)
   * [ES.27: Use `std::array` or `stack_array` for arrays on the stack](#es27-use-stdarray-or-stack_array-for-arrays-on-the-stack)
