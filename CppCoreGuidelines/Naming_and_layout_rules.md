@@ -2,7 +2,7 @@
 Set of rules that you might use if you have no better ideas, but the real aim is consistency, rather than any particular rule set.
 
 ## Table of contents
-* [NL.16: Use a convetional class member declaration order](#nl16-use-a-conventional-class-member-declaration-order)
+* [NL.16: Use a convetional class member declaration order](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Naming_and_layout_rules.md#nl16-use-a-convetional-class-member-declaration-order)
 * [NL.18: Use C++ style declarator layout](#nl18-use-c-style-declarator-layout)
 * [NL.25: Don't use `void` as an argument type](#nl25-dont-use-void-as-an-argument-type)
 * [NL.26: Use conventional `const` notation](#nl26-use-conventional-const-notation)
