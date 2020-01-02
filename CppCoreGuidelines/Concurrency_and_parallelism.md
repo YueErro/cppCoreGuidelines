@@ -3,7 +3,7 @@ For threaded environment.
 
 ## Table of contents
 * [CP.free: Lock-free programming](#cpfree-lock-free-programming)
-  * [CP.111: Use a convetional pattern if you really need double-checked locking](#cp111-use-a-conventional-pattern-if-you-really-need-double-checked-locking)
+  * [CP.111: Use a convetional pattern if you really need double-checked locking](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Concurrency_and_parallelism.md#cp111-use-a-convetional-pattern-if-you-really-need-double-checked-locking)
 
 ### CP.free: Lock-free programming
 
