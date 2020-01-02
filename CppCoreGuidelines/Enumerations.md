@@ -4,7 +4,7 @@ Used to define sets of integer values and for defining types for such sets of va
 ## Table of contents
 * [Enum.1: Prefer enumerations over macros](#enum1-prefer-enumerations-over-macros)
 * [Enum.3: Prefer `enum class` over "plain" `enum`](#enum3-prefer-enum-class-over-plain-enum)
-* [Enum.4: Define operations on enumerations for safe simple use](#enum4-define-operations-on-enumerations-for-safe-and-simple-use)
+* [Enum.4: Define operations on enumerations for safe simple use](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Enumerations.md#enum4-define-operations-on-enumerations-for-safe-simple-use)
 
 ### Enum.1: Prefer enumerations over macros
 
