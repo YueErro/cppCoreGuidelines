@@ -13,5 +13,5 @@
 - [Templates and generic programming](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Templates_and_generic_programming.md)
 - [Source files](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Source_files.md)
 - [The Standard Library](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/The_Standard_Library.md)
-- [Non-Rules and myths](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Non-rules_and_myths.md)
+- [Non-Rules and myths](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Non-Rules_and_myths.md)
 - [Naming and layout rules](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Naming_and_layout_rules.md)
