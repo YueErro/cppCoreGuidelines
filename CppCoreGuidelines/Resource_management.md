@@ -9,9 +9,9 @@ Rules related to resources such as leaks.
   * [R.14: Avoid `[]` parameters, prefer `span`](#r14-avoid--parameters-prefer-span)
 * [R.smart: Smart Pointers](#rsmart-smart-pointers)
   * [R.21: Prefer `unique_ptr` over `shared_ptr` unless you need to share ownership](#r21-prefer-unique_ptr-over-shared_ptr-unless-you-need-to-share-ownership)
-  * [R.24: Use `std::weak_ptr` to break cycles of `shared_ptr`](#r24-use-stdweak_ptr-to-break-cycles-of-shared_ptrs)
+  * [R.24: Use `std::weak_ptr` to break cycles of `shared_ptr`](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Resource_management.md#r24-use-stdweak_ptr-to-break-cycles-of-shared_ptr)
   * [R.32: Take a `unique_ptr<Widget>` parameter to express that a function assumes ownership of a `widget`](#r32-take-a-unique_ptrwidget-parameter-to-express-that-a-function-assumes-ownership-of-a-widget)
-  * [R.33: Take a `unique_ptr<widget>&` parameter to express that a function reseats the `widget`](#r33-take-a-unique_ptrwidget-parameter-to-express-that-a-function-reseats-thewidget)
+  * [R.33: Take a `unique_ptr<widget>&` parameter to express that a function reseats the `widget`](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Resource_management.md#r33-take-a-unique_ptrwidget-parameter-to-express-that-a-function-reseats-the-widget)
 
 ### R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization
 ```cpp
