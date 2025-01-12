@@ -1,10 +1,14 @@
 # Enum: Enumerations
+
 Used to define sets of integer values and for defining types for such sets of values.
 
 ## Table of contents
-* [Enum.1: Prefer enumerations over macros](#enum1-prefer-enumerations-over-macros)
-* [Enum.3: Prefer `enum class` over "plain" `enum`](#enum3-prefer-enum-class-over-plain-enum)
-* [Enum.4: Define operations on enumerations for safe simple use](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Enumerations.md#enum4-define-operations-on-enumerations-for-safe-simple-use)
+
+- [Enum: Enumerations](#enum-enumerations)
+  - [Table of contents](#table-of-contents)
+    - [Enum.1: Prefer enumerations over macros](#enum1-prefer-enumerations-over-macros)
+    - [Enum.3: Prefer `enum class` over "plain" `enum`](#enum3-prefer-enum-class-over-plain-enum)
+    - [Enum.4: Define operations on enumerations for safe simple use](#enum4-define-operations-on-enumerations-for-safe-simple-use)
 
 ### Enum.1: Prefer enumerations over macros
 
@@ -28,12 +32,14 @@ Web_color webby = Web_color::blue;
 ```
 
 ### Enum.3: Prefer `enum class` over "plain" `enum`
+
 ```cpp
 enum class Product_info{ red = 0, purple = 1, blue = 2} // do
 enum Product_info{ red = 0, purple = 1, blue = 2}       // do not
 ```
 
 ### Enum.4: Define operations on enumerations for safe simple use
+
 ```cpp
 //        0    1    2    3    4    5    6
 enum Day{mon, tue, wed, thu, fri, sat, sun};

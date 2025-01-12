@@ -1,19 +1,24 @@
 # R: Resource management
+
 Rules related to resources such as leaks.
 
 ## Table of contents
-* [R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization)](#r1-manage-resources-automatically-using-resource-handles-and-raii-resource-acquisition-is-initialization)
-* [R.5: Prefer scoped objects, don't heap-allocate unnecessarily](#r5-prefer-scoped-objects-dont-heap-allocate-unnecessarily)
-* [R.alloc: Allocation and deallocation](#ralloc-allocation-and-deallocation)
-  * [R.13: Perform at most one explicit resource allocation in a single expression statement](#r13-perform-at-most-one-explicit-resource-allocation-in-a-single-expression-statement)
-  * [R.14: Avoid `[]` parameters, prefer `span`](#r14-avoid--parameters-prefer-span)
-* [R.smart: Smart Pointers](#rsmart-smart-pointers)
-  * [R.21: Prefer `unique_ptr` over `shared_ptr` unless you need to share ownership](#r21-prefer-unique_ptr-over-shared_ptr-unless-you-need-to-share-ownership)
-  * [R.24: Use `std::weak_ptr` to break cycles of `shared_ptr`](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Resource_management.md#r24-use-stdweak_ptr-to-break-cycles-of-shared_ptr)
-  * [R.32: Take a `unique_ptr<Widget>` parameter to express that a function assumes ownership of a `widget`](#r32-take-a-unique_ptrwidget-parameter-to-express-that-a-function-assumes-ownership-of-a-widget)
-  * [R.33: Take a `unique_ptr<widget>&` parameter to express that a function reseats the `widget`](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Resource_management.md#r33-take-a-unique_ptrwidget-parameter-to-express-that-a-function-reseats-the-widget)
 
-### R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization
+- [R: Resource management](#r-resource-management)
+  - [Table of contents](#table-of-contents)
+    - [R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization)](#r1-manage-resources-automatically-using-resource-handles-and-raii-resource-acquisition-is-initialization)
+    - [R.5: Prefer scoped objects, don't heap-allocate unnecessarily](#r5-prefer-scoped-objects-dont-heap-allocate-unnecessarily)
+    - [R.alloc: Allocation and deallocation](#ralloc-allocation-and-deallocation)
+      - [R.13: Perform at most one explicit resource allocation in a single expression statement](#r13-perform-at-most-one-explicit-resource-allocation-in-a-single-expression-statement)
+      - [R.14: Avoid `[]` parameters, prefer `span`](#r14-avoid--parameters-prefer-span)
+    - [R.smart: Smart pointers](#rsmart-smart-pointers)
+      - [R.21: Prefer `unique_ptr` over `shared_ptr` unless you need to share ownership](#r21-prefer-unique_ptr-over-shared_ptr-unless-you-need-to-share-ownership)
+      - [R.24: Use `std::weak_ptr` to break cycles of `shared_ptr`](#r24-use-stdweak_ptr-to-break-cycles-of-shared_ptr)
+      - [R.32: Take a `unique_ptr<Widget>` parameter to express that a function assumes ownership of a `widget`](#r32-take-a-unique_ptrwidget-parameter-to-express-that-a-function-assumes-ownership-of-a-widget)
+      - [R.33: Take a `unique_ptr<widget>&` parameter to express that a function reseats the `widget`](#r33-take-a-unique_ptrwidget-parameter-to-express-that-a-function-reseats-the-widget)
+
+### R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization)
+
 ```cpp
 class Port{
   PortHandle port;
@@ -27,6 +32,7 @@ public:
 ```
 
 ### R.5: Prefer scoped objects, don't heap-allocate unnecessarily
+
 ```cpp
 // do
 void f(int n){
@@ -44,6 +50,7 @@ void f(int n){
 ### R.alloc: Allocation and deallocation
 
 #### R.13: Perform at most one explicit resource allocation in a single expression statement
+
 ```cpp
 void fun(shared_ptr<Widget> sp1, shared_ptr<Widget> sp2);
 fun( make_shared<Widget>(a, b), make_shared<Widget>(c, d) );                            // do
@@ -51,6 +58,7 @@ fun( shared_ptr<Widget>( new Widget(a, b) ), shared_ptr<Widget>( new Widget(c, d
 ```
 
 #### R.14: Avoid `[]` parameters, prefer `span`
+
 ```cpp
 void f(gsl::span<int>); // do
 void f( int[] );        // do not
@@ -60,6 +68,7 @@ void f(int*);           // do not
 ### R.smart: Smart pointers
 
 #### R.21: Prefer `unique_ptr` over `shared_ptr` unless you need to share ownership
+
 ```cpp
 void f(){
   unique_ptr<Base> base = make_unique<Derived>(); // do
@@ -68,6 +77,7 @@ void f(){
 ```
 
 #### R.24: Use `std::weak_ptr` to break cycles of `shared_ptr`
+
 ```cpp
 #include <memory>
 class bar;
@@ -94,6 +104,7 @@ private:
 ```
 
 #### R.32: Take a `unique_ptr<Widget>` parameter to express that a function assumes ownership of a `widget`
+
 ```cpp
 void sink(unique_ptr<widget>);          // takes ownership of the widget
 void uses(widget*);                     // just uses the widget
@@ -101,6 +112,7 @@ void thinko(const unique_ptr<widget>&); // usually not wanted
 ```
 
 #### R.33: Take a `unique_ptr<widget>&` parameter to express that a function reseats the `widget`
+
 ```cpp
 void reseat(unique_ptr<widget>&);       // "will" or "might" reseat pointer
 void thinko(const unique_ptr<widget>&); // usually not wanted

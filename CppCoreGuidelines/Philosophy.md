@@ -1,13 +1,18 @@
 # P: Philosophy
+
 Philosophical rules, good practice.
 
 ## Table of contents
-* [P.1: Express ideas directly in code](#p1-express-ideas-directly-in-code)
-* [P.3: Express intent](#p3-express-intent)
-* [P.5: Prefer compile time checking to run-time checking](#p5-prefer-compile-time-checking-to-run-time-checking)
-* [P.9: Don't waste time or space](#p9-dont-waste-time-or-space)
+
+- [P: Philosophy](#p-philosophy)
+  - [Table of contents](#table-of-contents)
+    - [P.1: Express ideas directly in code](#p1-express-ideas-directly-in-code)
+    - [P.3: Express intent](#p3-express-intent)
+    - [P.5: Prefer compile time checking to run-time checking](#p5-prefer-compile-time-checking-to-run-time-checking)
+    - [P.9: Don't waste time or space](#p9-dont-waste-time-or-space)
 
 ### P.1: Express ideas directly in code
+
 ```cpp
 class Date{
   // ...
@@ -19,6 +24,7 @@ public:
 ```
 
 ### P.3: Express intent
+
 ```cpp
 // for each statements
 for (const auto& v : vec){} // get v
@@ -26,6 +32,7 @@ for (auto& v : vec){} // modify v
 ```
 
 ### P.5: Prefer compile time checking to run-time checking
+
 <details>
   <summary>Compile time errors</summary>
   <ul>
@@ -50,6 +57,7 @@ for (auto& v : vec){} // modify v
 </details>
 
 ### P.9: Don't waste time or space
+
 ```cpp
 int vecSize = strlen(s);
 for (int i = 0; i < vecLen; i++){}    // do

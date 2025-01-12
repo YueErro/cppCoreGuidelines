@@ -1,13 +1,18 @@
 # CP: Concurrency and parallelism
+
 For threaded environment.
 
 ## Table of contents
-* [CP.free: Lock-free programming](#cpfree-lock-free-programming)
-  * [CP.111: Use a convetional pattern if you really need double-checked locking](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Concurrency_and_parallelism.md#cp111-use-a-convetional-pattern-if-you-really-need-double-checked-locking)
+
+- [CP: Concurrency and parallelism](#cp-concurrency-and-parallelism)
+  - [Table of contents](#table-of-contents)
+    - [CP.free: Lock-free programming](#cpfree-lock-free-programming)
+      - [CP.111: Use a convetional pattern if you really need double-checked locking](#cp111-use-a-convetional-pattern-if-you-really-need-double-checked-locking)
 
 ### CP.free: Lock-free programming
 
 #### CP.111: Use a convetional pattern if you really need double-checked locking
+
 ```cpp
 mutex action_mutex;
 atomic<bool> action_needed;   // do

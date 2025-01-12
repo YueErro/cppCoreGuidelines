@@ -1,10 +1,16 @@
 # Per: Performance
+
 Rules for people who need high performance or low-latency.
 
 ## Table of contents
-* [Per.19: Access memory predictably](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Performance.md#per11-access-memory-predictably)
+
+- [Per: Performance](#per-performance)
+  - [Table of contents](#table-of-contents)
+    - [Per.11: Access memory predictably](#per11-access-memory-predictably)
+
 
 ### Per.11: Access memory predictably
+
 ```cpp
 int matrix[rows][cols];
 // do

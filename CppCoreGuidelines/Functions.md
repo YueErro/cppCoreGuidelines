@@ -1,7 +1,9 @@
 # F: Functions
+
 A function definition is a function declaration that also specifies the function's implementation, the function body. Try to name it meaningfully.
 
 ## Table of contents
+
 - [F: Functions](#f-functions)
   - [Table of contents](#table-of-contents)
     - [F.def: Function definitions](#fdef-function-definitions)
@@ -15,14 +17,17 @@ A function definition is a function declaration that also specifies the function
 ### F.def: Function definitions
 
 #### F.5: If a function is very small and time-critical, declare it inline
+
 ```cpp
 inline string cat(const string& s, const string& s2){
   return s + s2;
 }
 ```
+
 _An inline function is part of the ABI_
 
 #### F.7: For general use, take `T*` or `T&` arguments rather than smart pointers
+
 ```cpp
 // accepts any int*
 void f(int*);

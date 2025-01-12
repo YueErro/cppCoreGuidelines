@@ -1,9 +1,13 @@
 # Con: Constants and immutability
 
 ## Table of contents
-* [Con.2: By default, make member functions `const`](#con2-by-default-make-member-functions-const)
+
+- [Con: Constants and immutability](#con-constants-and-immutability)
+  - [Table of contents](#table-of-contents)
+    - [Con.2: By default, make member functions `const`](#con2-by-default-make-member-functions-const)
 
 ### Con.2: By default, make member functions `const`
+
 ```cpp
 class Point{
   int x, y;

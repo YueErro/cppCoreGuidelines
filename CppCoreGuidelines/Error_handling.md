@@ -1,11 +1,16 @@
 # E: Error handling
+
 Detect, transmit information about the error, preserve a valid state of the program and avoid resource leaks.
 
 ## Table of contents
-* [E.12: Use `noexcept` when existing a function because of a `throw` is impossible or unacceptable](https://github.com/YueErro/cppCoreGuidelines/blob/master/CppCoreGuidelines/Error_handling.md#e12-use-noexcept-when-existing-a-function-because-of-a-throw-is-impossible-or-unacceptable)
-* [E.15: Catch exceptions from a hierarchy by reference](#e15-catch-exceptions-from-a-hierarchy-by-reference)
+
+- [E: Error handling](#e-error-handling)
+  - [Table of contents](#table-of-contents)
+    - [E.12: Use `noexcept` when existing a function because of a `throw` is impossible or unacceptable](#e12-use-noexcept-when-existing-a-function-because-of-a-throw-is-impossible-or-unacceptable)
+    - [E.15: Catch exceptions from a hierarchy by reference](#e15-catch-exceptions-from-a-hierarchy-by-reference)
 
 ### E.12: Use `noexcept` when existing a function because of a `throw` is impossible or unacceptable
+
 ```cpp
 double compute(double d) noexcept{
   return log( sqrt(d <= 0 ? 1 : d) )
@@ -13,6 +18,7 @@ double compute(double d) noexcept{
 ```
 
 ### E.15: Catch exceptions from a hierarchy by reference
+
 ```cpp
 void f(){
   try{
