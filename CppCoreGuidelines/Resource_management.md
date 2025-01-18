@@ -9,6 +9,7 @@ Rules related to resources such as leaks.
     - [R.1: Manage resources automatically using resource handles and RAII (Resource Acquisition Is Initialization)](#r1-manage-resources-automatically-using-resource-handles-and-raii-resource-acquisition-is-initialization)
     - [R.5: Prefer scoped objects, don't heap-allocate unnecessarily](#r5-prefer-scoped-objects-dont-heap-allocate-unnecessarily)
     - [R.alloc: Allocation and deallocation](#ralloc-allocation-and-deallocation)
+      - [R.12: Immediately give the result of an explicit resource allocation to a manager object](#r12-immediately-give-the-result-of-an-explicit-resource-allocation-to-a-manager-object)
       - [R.13: Perform at most one explicit resource allocation in a single expression statement](#r13-perform-at-most-one-explicit-resource-allocation-in-a-single-expression-statement)
       - [R.14: Avoid `[]` parameters, prefer `span`](#r14-avoid--parameters-prefer-span)
     - [R.smart: Smart pointers](#rsmart-smart-pointers)
@@ -48,6 +49,17 @@ void f(int n){
 ```
 
 ### R.alloc: Allocation and deallocation
+
+#### R.12: Immediately give the result of an explicit resource allocation to a manager object
+
+```cpp
+#include <fstream>
+
+void func(const std::string & name){
+  std::ifstream f{name}; // open the file
+  std::vector<char> buf(1024);
+}
+```
 
 #### R.13: Perform at most one explicit resource allocation in a single expression statement
 
